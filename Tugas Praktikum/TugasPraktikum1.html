@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Tugas Praktikum 1</title>
+    </head>
+    <script language = "JavaScript">
+        function keterangan(){
+            var nilai=document.kirim.A.value
+            if (nilai>100){
+                document.kirim.B.value = "Data Melebihi Range"
+            }
+            else if (nilai >=93){
+                document.kirim.B.value = "A"
+            }
+            else if (nilai >= 83){
+                document.kirim.B.value = "B"
+            }
+            else if (nilai >=75){
+                document.kirim.B.value = "C"
+            }
+            else if (nilai >=50){
+                document.kirim.B.value = "D"
+            }
+            else if (nilai >=0){
+                document.kirim.B.value = "E"
+            }
+            else {
+                document.kirim.B.value = "Data Tidak Valid"
+            }
+        }
+    </script>
+    <body>
+        <form method="POST" name="kirim">
+        <p>Nilai <input type="text" name="A" size="20"> <br></p>
+        
+        <p><input type ="button" value ="Konversi" name="C" onclick=keterangan()> <br></p>
+        
+        <p>Keterangan <input type="text" name="B" size="20" readonly> <br></p>
+        
+        </form>
+        </body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+    <head>
+    <title>Kelkulator Sederhana</title>
+    </head>
+    <SCRIPT language="JavaScript">
+
+        function hitung (akhir){
+            document.send.C.value= akhir
+            }
+
+        function penjumlahan (bil_1,bil_2){
+            var hasil = Number(bil_1) + Number(bil_2)
+            hitung (hasil)
+            }
+
+        function pengurangan(bil_1,bil_2){
+            var hasil = bil_1 - bil_2
+            hitung (hasil)
+            }
+
+        function perkalian(bil_1,bil_2){
+            var hasil = bil_1 * bil_2
+            hitung (hasil)
+            }
+
+        function pembagian(bil_1,bil_2){
+            var hasil = bil_1 / bil_2
+            hitung (hasil)
+            }
+
+    </SCRIPT>
+
+<body>
+    <form method="POST" name="send">
+        <p>Bilangan 1 <input type="text" name="A" size="20"> <br></p>
+
+        <p>Bilangan 2 <input type="text" name="B" size="20"> <br></p>
+
+        <p>Hasil <input type="text" name="C" size="20" readonly> <br></p>
+
+        <input type="button" value="+" name="ditambah" onclick="penjumlahan(document.send.A.value, document.send.B.value)">
+        <input type="button" value="-" name="dikurangin" onclick="pengurangan(document.send.A.value, document.send.B.value)">
+        <input type="button" value="×" name="dikali" onclick="perkalian(document.send.A.value, document.send.B.value)">
+        <input type="button" value="÷" name="dibagi" onclick="pembagian(document.send.A.value, document.send.B.value)">
+    </form>
+</body>
+</html>
